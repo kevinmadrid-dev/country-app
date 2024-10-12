@@ -14,8 +14,6 @@ export class CountriesService {
   constructor(private hhtp: HttpClient) {}
 
   searchCapital(term: string): Observable<Country[]> {
-    console.log(term)
-
     return this.hhtp.get<Country[]>(`${this.apiUrl}/capital/${term}`)
   }
 }

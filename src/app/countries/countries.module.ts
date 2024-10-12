@@ -8,13 +8,15 @@ import { CapitalPageComponent } from "./pages/capital-page/capital-page.componen
 import { CountryPageComponent } from "./pages/country-page/country-page.component"
 import { RegionPageComponent } from "./pages/region-page/region-page.component"
 import { HomeCountryPageComponent } from "./pages/home-country-page/home-country-page.component"
+import { CountryTableComponent } from "./components/country-table/country-table.component"
 
 @NgModule({
   declarations: [
     CapitalPageComponent,
     CountryPageComponent,
     RegionPageComponent,
-    HomeCountryPageComponent
+    HomeCountryPageComponent,
+    CountryTableComponent
   ],
   imports: [CommonModule, CountriesRoutingModule, SharedModule]
 })

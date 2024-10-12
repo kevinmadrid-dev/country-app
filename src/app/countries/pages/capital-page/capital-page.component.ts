@@ -14,9 +14,6 @@ export class CapitalPageComponent {
   constructor(private countriesService: CountriesService) {}
 
   searchCapital(term: string): void {
-    console.log("SearchCapital")
-    console.log({ term })
-
     this.countriesService.searchCapital(term).subscribe((countries) => {
       this.countries = countries
     })
