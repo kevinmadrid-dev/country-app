@@ -1,4 +1,4 @@
-<h2>By capital</h2>
+<h2>Capital Name</h2>
 
 <hr />
 
@@ -17,6 +17,8 @@
 <div class="row">
   <div class="col">
     <!--Results Table-->
-    --Results Table--
+    <ul>
+      <li *ngFor="let country of countries">{{ country.capital }}</li>
+    </ul>
   </div>
 </div>
