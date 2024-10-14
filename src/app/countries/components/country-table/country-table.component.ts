@@ -6,7 +6,7 @@ import { Country } from "../../interfaces/country"
   templateUrl: "./country-table.component.html",
   styles: `
     img {
-      width: 30px;
+      width: 35px;
       height: 25px;
     }`
 })
