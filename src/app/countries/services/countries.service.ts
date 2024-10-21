@@ -13,9 +13,9 @@ export class CountriesService {
 
   constructor(private hhtp: HttpClient) {}
 
-  searchCapital(term: string): Observable<Country[]> {
+  searchRegion(term: string): Observable<Country[]> {
     return this.hhtp
-      .get<Country[]>(`${this.apiUrl}/capital/${term}`)
+      .get<Country[]>(`${this.apiUrl}/region/${term}`)
       .pipe(catchError(() => of([])))
   }
 
@@ -25,9 +25,15 @@ export class CountriesService {
       .pipe(catchError(() => of([])))
   }
 
-  searchRegion(term: string): Observable<Country[]> {
+  searchCapital(term: string): Observable<Country[]> {
     return this.hhtp
-      .get<Country[]>(`${this.apiUrl}/region/${term}`)
+      .get<Country[]>(`${this.apiUrl}/capital/${term}`)
+      .pipe(catchError(() => of([])))
+  }
+
+  searchCountryId(countryId: string): Observable<Country[]> {
+    return this.hhtp
+      .get<Country[]>(`${this.apiUrl}/alpha/${countryId}`)
       .pipe(catchError(() => of([])))
   }
 }
