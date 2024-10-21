@@ -8,16 +8,16 @@ import { HomeCountryPageComponent } from "./pages/home-country-page/home-country
 
 const routes: Routes = [
   {
-    path: "capital",
-    component: CapitalPageComponent
+    path: "region",
+    component: RegionPageComponent
   },
   {
     path: "country",
     component: CountryPageComponent
   },
   {
-    path: "region",
-    component: RegionPageComponent
+    path: "capital",
+    component: CapitalPageComponent
   },
   {
     path: "id/:countryId",

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core"
-import { ActivatedRoute } from "@angular/router"
+import { ActivatedRoute, Router } from "@angular/router"
 
 import { CountriesService } from "../../services/countries.service"
 
@@ -11,13 +11,18 @@ import { CountriesService } from "../../services/countries.service"
 export class HomeCountryPageComponent implements OnInit {
   constructor(
     private activateRoute: ActivatedRoute,
+    private router: Router,
     private countriesService: CountriesService
   ) {}
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe(({ countryId }) => {
       this.countriesService.searchCountryId(countryId).subscribe((country) => {
-        console.log({ country })
+        if (!country) {
+          return this.router.navigate(["/country"])
+        }
+
+        return
       })
     })
   }
