@@ -5,11 +5,11 @@ import { CountriesService } from "../../services/countries.service"
 import { Country } from "../../interfaces/country"
 
 @Component({
-  selector: "countries-home-country-page",
-  templateUrl: "./home-country-page.component.html",
+  selector: "countries-id-country-page",
+  templateUrl: "./id-country-page.component.html",
   styles: ``
 })
-export class HomeCountryPageComponent implements OnInit {
+export class IdCountryPageComponent implements OnInit {
   country?: Country
 
   constructor(
@@ -24,7 +24,6 @@ export class HomeCountryPageComponent implements OnInit {
         if (!country) return this.router.navigate(["/country"])
 
         return (this.country = country)
-        // return
       })
     })
   }

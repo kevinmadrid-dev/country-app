@@ -4,7 +4,7 @@ import { Routes, RouterModule } from "@angular/router"
 import { CapitalPageComponent } from "./pages/capital-page/capital-page.component"
 import { CountryPageComponent } from "./pages/country-page/country-page.component"
 import { RegionPageComponent } from "./pages/region-page/region-page.component"
-import { HomeCountryPageComponent } from "./pages/home-country-page/home-country-page.component"
+import { IdCountryPageComponent } from "./pages/id-country-page/id-country-page.component"
 
 const routes: Routes = [
   {
@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: "id/:countryId",
-    component: HomeCountryPageComponent
+    component: IdCountryPageComponent
   },
   {
     path: "**",
